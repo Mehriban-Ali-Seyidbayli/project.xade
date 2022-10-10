@@ -1,0 +1,258 @@
+                  :root {
+                     --orange: rgb(247, 100, 2);
+                     --white: rgb(255, 255, 240);
+                 }
+                 
+                 * {
+                     margin: 0;
+                     padding: 0;
+                     box-sizing: border-box;
+                     font-family: sans-serif;
+                 }
+                 /*Global*/
+                 
+                 .container {
+                     width: 90%;
+                     margin: auto;
+                     overflow: hidden;
+                 }
+                 
+                 .button1 {
+                     height: 30px;
+                     padding: 0 20px;
+                     font-size: 0.9rem;
+                     background-color: var(--orange);
+                     color: var(--white);
+                     border: none;
+                     cursor: pointer;
+                 }
+                 
+                 .dark {
+                     background-color: rgb(156, 156, 119);
+                     color: rgb(255, 255, 240);
+                     padding: 15px;
+                     margin: 20px 0;
+                 }
+                 
+                 h1 {
+                     text-transform: uppercase;
+                     font-size: 3rem;
+                 }
+                 
+                 h3 {
+                     text-transform: capitalize;
+                 }
+                 
+                 nav ul li a {
+                     text-transform: capitalize;
+                     text-decoration: none;
+                 }
+                 
+                 header {
+                     background-color: rgb(156, 156, 119);
+                     color: var(--white);
+                     min-height: 100px;
+                     padding-top: 15px;
+                     border-bottom: 3px solid var(--orange);
+                     display: flex;
+                 }
+                 
+                 .head {
+                     display: flex;
+                     justify-content: space-between;
+                 }
+                 
+                 header a {
+                     font-size: 1.5rem;
+                     font-weight: bold;
+                     color: var(--white);
+                 }
+                 
+                 header ul {
+                     display: flex;
+                 }
+                 
+                 header ul li {
+                     list-style-type: none;
+                     margin-right: 30px;
+                     position: relative;
+                 }
+                 
+                 header ul li::after {
+                     content: '';
+                     width: 0;
+                     height: 3px;
+                     left: 0;
+                     bottom: -5px;
+                     background-color: var(--orange);
+                     position: absolute;
+                     transition: 0.3s;
+                 }
+                 
+                 header ul li:hover::after {
+                     width: 100%;
+                 }
+                 
+                 header .name,
+                 header .current a {
+                     color: var(--orange);
+                 }
+                 /*SECTION 1*/
+                 
+                 #section1 {
+                     min-height: 400px;
+                     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/image.jpg') no-repeat 0 -400px;
+                     background-size: cover;
+                     text-align: center;
+                     color: var(--white);
+                 }
+                 
+                 #section1 h1 {
+                     font-size: 2.5rem;
+                     margin-top: 100px;
+                     margin-bottom: 25px;
+                 }
+                 
+                 #section1 p {
+                     font-size: 1.25rem;
+                     line-height: 1.5rem;
+                 }
+                 /*SECTION 2*/
+                 
+                 #section2 {
+                     background-color: rgb(156, 156, 119);
+                     color: var(--white);
+                     padding: 20px;
+                 }
+                 
+                 .news {
+                     display: flex;
+                     justify-content: space-between;
+                 }
+                 
+                 .news h1 {
+                     text-transform: capitalize;
+                     font-size: 1.5rem;
+                 }
+                 
+                 #section2 input[type="email"] {
+                     height: 30px;
+                     width: 250px;
+                     padding: 3px;
+                 }
+                 /*SECTION 3*/
+                 
+                 #section3 {
+                     margin-top: 20px;
+                 }
+                 
+                 #section3 .boxes {
+                     display: flex;
+                     justify-content: space-evenly;
+                 }
+                 
+                 #section3 .boxes .box {
+                     width: 30%;
+                     padding: 10px;
+                     text-align: center;
+                 }
+                 
+                 .boxes .box img {
+                     width: 80px;
+                 }
+                 
+                 .boxes .box .img1 {
+                     width: 70px;
+                 }
+                 
+                 .boxes .box p {
+                     margin-top: 20px;
+                     line-height: 1.5rem;
+                 }
+                 /*ABOUT*/
+                 
+                 .about {
+                     display: flex;
+                     justify-content: space-between;
+                 }
+                 
+                 .about-heading {
+                     font-size: 2rem;
+                     text-transform: capitalize;
+                     margin-bottom: 20px;
+                 }
+                 /*SERVICES*/
+                 
+                 .services {
+                     display: flex;
+                     justify-content: space-between;
+                 }
+                 
+                 ul#service li {
+                     background-color: rgb(235, 232, 230);
+                     padding: 20px;
+                     margin-bottom: 10px;
+                     border: 1px solid var(--orange);
+                 }
+                 
+                 ul#service li p {
+                     margin-top: 15px;
+                 }
+                 
+                 aside#sidebar .info input,
+                 aside#sidebar .info textarea {
+                     width: 90%;
+                 }
+                 
+                 .info input,
+                 textarea {
+                     padding: 5px;
+                 }
+                 
+                 .info div {
+                     margin-bottom: 10px;
+                 }
+                 
+                 footer {
+                     margin-top: 10px;
+                     padding: 20px;
+                     text-align: center;
+                     background-color: var(--orange);
+                     color: var(--white);
+                 }
+                 /*Media Queries*/
+                 
+                 @media (max-width:768px) {
+                     .head,
+                     .news,
+                     #section3 .boxes,
+                     .about,
+                     .services {
+                         display: block;
+                     }
+                     .head h1 {
+                         font-size: 2rem;
+                     }
+                     .head ul li a {
+                         font-size: 1rem;
+                     }
+                     header h1,
+                     nav li {
+                         text-align: center;
+                         width: 100%;
+                     }
+                     #section2 button,
+                     .info button {
+                         display: block;
+                         width: 100%;
+                     }
+                     #section2 form input[type="email"],
+                     #sidebar .info input,
+                     #sidebar .info textarea {
+                         width: 100%;
+                         margin-bottom: 5px;
+                     }
+                     #section3 .boxes .box {
+                         width: 100%;
+                     }
+                 }
